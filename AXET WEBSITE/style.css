@@ -697,7 +697,6 @@ padding-top: 100px;
 }
 
 .vid-circle{
-  /* background-color: #fefdfd; */
   background-color: white;
 width: 103px;
   height: 103px;
@@ -742,12 +741,13 @@ margin-top: 70px;
 .clients-img{
   width: 100%;
   height: 106px;
+  box-sizing: border-box;
   padding: 40px 20px; /* add correct padding, check design, 10px I think*/
   margin-bottom: 70px;
 
 }
 
-.client-img img{
+.clients-img img{
   width: 100%;
   height: 100%;
 }
@@ -764,6 +764,7 @@ margin-top: 40px;
 
 .about-company, .information, .contact-info, .recent-news{
   padding: 20px 20px;
+  box-sizing: border-box;
   color: #FFFFFF;
 }
 
@@ -779,7 +780,7 @@ margin-left: 20px;
 }
 
 .about-company-text, .information-text, .contact-info-text, .recent-news-text{
-  width: 100%;
+  /* width: 100%; */
 height: 102px;
 font-style: normal;
 font-weight: 300;
@@ -831,4 +832,118 @@ text-align: center;
 background-color: white;
 margin-top: 10px;
 
+}
+
+@media screen and (max-width: 768px){
+  .nav-right{
+    display: none;
+  }
+  .main-background{
+    background-size: cover;
+  }
+  .form-div{
+    display: none;
+  }
+
+  /* .about-axet{
+    position: relative;
+  } */ /* Lani did this but I already did it in my main css code*/
+
+  .about-axet{
+    grid-template-columns: 1fr;
+  }  /* Lani styled the div wrapping her about-page heading instead, ask why*/
+  /* she also used display: block here probably because she used display flex in the main styling*/
+
+  .about-axet-left-heading{
+      width: 100%
+    } /* I think there's an unnecessary div here, remove the one wrapping the headings*/
+
+  .about-axet-right{
+    /*  cynthia removed this? */
+    /* background-size: cover;  not sure why she commented it out*/
+    margin: 0;
+  }
+
+  .our-services-boxes{
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+
+  .about-company {
+    grid-template-columns: 1fr;
+  }
+
+  .our-services-boxes-single{
+    grid-row-gap: 20px;
+  }
+
+  .news-boxes{
+    grid-template-columns: 1fr;    
+    padding: 0px 40px;
+    grid-row-gap: 20px;
+  }
+
+  .clients-section{
+    grid-template-columns: 1fr;
+    padding: 0px 40px;
+    grid-row-gap: 20px;
+  }
+
+  .work-flow-circles{
+    grid-template-columns: 1fr;
+  }
+
+  .main-background{
+    width: 100%;
+  }
+
+  .work-flow-circles{
+    margin-top: 40px ;
+    padding: 0px 40px;
+  }
+
+  .work-flow-circle{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+  }
+
+  .work-flow-background{
+    height: auto;
+    background-size: cover;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .vid{
+    margin-top: 0;
+    background-size: cover;
+  }
+
+  .news {
+    padding: 0px 40px;
+  }
+
+  .news-boxes {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+
+  .news-box-title button{
+    margin-bottom: 20px;
+  }
+
+  .clients-img img{
+    margin-bottom: 40px; 
+  }
+
+  .about-company{
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 40px;
+    grid-column-gap: 60px;
+  }
+
+  footer{
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+  }
 }
