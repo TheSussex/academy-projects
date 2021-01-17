@@ -1,0 +1,542 @@
+*{
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+  }
+
+.landing-page{
+    width: 100%;
+    height: 862.63px;
+    background-image: url(/assets/background-one.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.landing-page img{
+    width: 100%;
+    height: 100%;
+}
+
+.landing-page-header{
+    width: 100%;
+    height: 51px;
+    padding-right: 154px; /* not sure of the exact padding because the header is not really defined*/
+    padding-left: 120px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.logo{
+  width: 58.08px;
+  height: 48.56px;
+  margin-top: 13.58px;
+}
+
+.logo img{
+  width: 100%;
+  height: 100%;
+}
+
+.menu{
+  display: flex;
+  align-items: right; 
+  margin-top: 25.86px;
+}
+
+.menu a{
+  height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150.1%;
+  text-align: center;
+  color: #FFFFFF;
+  margin-right: 38px;
+  box-sizing: border-box;
+}
+
+.landing-page-text-big{
+    width: 100%;
+    height: 126px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 143.1%;
+    color: #FFFFFF;
+    margin-left: 120.31px;
+    margin-top: 227.23px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.landing-page-text-small{
+    width: 100%;
+height: 36px;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 150.1%;
+color: #FFFFFF;
+margin-left: 122.93px;
+margin-top: 27.31px;
+box-sizing: border-box;
+}
+
+
+button {
+  width: 147.02px;
+    height: 45.83px;
+    border: none;
+    background: rgba(113, 213, 255, 0.24);
+    border-radius: 90px;
+    font-style: normal;
+    font-weight: normal;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 10px;
+    margin-top: 53.7px;
+    margin-left: 119.62px;
+  }
+
+
+  .landing-page-main{
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .landing-page-sm-icons{
+      width: 100%;
+      height: 14px;
+      display: flex;
+      padding-top: 100px;
+      margin-left: 119.62px; 
+      box-sizing: border-box;
+  }
+
+  .icon{
+    width: 100%;
+    height: 17.41px;  
+    padding-right: 24.95px;
+  }
+
+  .icon img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .landing-page-triangle{
+      margin-right: 154.74px;
+      margin-top: 30px;
+      box-sizing: border-box;
+  }
+
+  .service1{ 
+    width: 100%;
+    height: 278.39px;
+    text-align: center;
+    margin: auto;
+    margin-top: -20px;
+  }
+
+  .service1-head, .portfolio-head, .our-team-head{
+    width: 100%;
+    height: 26px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 143.1%;    
+    text-align: center;
+    color: #FF688C;
+    margin-bottom: 16.03px;
+  }
+
+  .service1-subhead, .portfolio-subhead, .our-team-subhead{
+    width: 100%;
+    height: 108px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 143.1%;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 50.35px;
+  }
+
+  .service1-text, .portfolio-text, .our-team-text{
+    width: 100%;
+    height: 78px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 143.1%;        
+    color: #7F7E7E;
+    text-align: center;
+    margin-top: 50px;
+    align-items: center;
+    margin-bottom: 65.19px;
+  }
+
+  .service2, .service3, .service4{
+      display: flex;
+      margin-right: 202.07px;
+      margin-top: 137.11px;
+      width: 100%;
+  }
+
+  .service2-head, .service3-head, .service4-head{
+    width: 100%x;
+    height: 34px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 143.1%;    
+    color: #000000;
+  }
+
+  .service2-text, .service3-text, .service4-text, .work-with-us-text{
+    width: 100%;
+    height: 78px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 143.1%;        
+    color: #7F7E7E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-top: 50px;
+  }
+
+  .triangle2{
+    margin-left: 119.62px;
+  }
+
+  .portfolio, .our-team{
+    width: 100%;
+    height: 278.39px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .service3{
+    margin: auto;
+  }
+
+  .service3-content{
+    margin-top: 100.34px;
+    margin-left: 199.93px;
+    height: 173px;
+  }
+
+  .service3-text{
+    margin-top: 64.34px;
+  }
+
+  .circle1{
+    margin-right: 179.2px;
+  }
+
+  .service4{
+    margin-left: 166.94px;
+    margin-right: 204.02px;
+  }
+
+  .square1{
+    margin-right: 86.07px;
+  }
+
+  .portfolio{
+    margin-top: 336.54px;
+  }
+
+  .portfolio-pics-row1, .portfolio-pics-row2 {
+    width: 100%;
+    
+    margin-top: 65.19px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 39px;
+    box-sizing: border-box;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+
+  .portfolio-pics-row1-img, .portfolio-pics-row2-img{
+    width: 100%;
+    height: 464.05px;
+  }
+
+  .portfolio-pics-row1-img img, .portfolio-pics-row2-img img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .portfolio-pics-row2{
+    margin-top: 48.36px;
+  }
+
+  .more{
+    width: 147.02px;
+    height: 45.83px;
+    background: #FFFFFF;
+    border: 2px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 90px;
+  }
+
+  .more p{
+    height: 23px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 143.1%;
+    text-align: center;
+    color: #FF688C;
+  }
+
+  .more-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+  }
+
+  .our-team{
+    margin-top: 211.96px;
+  }
+
+  .our-team-complete{
+    margin-top: 114.59px;
+    /* padding-right: 123.01px; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 26.99px;
+    box-sizing: border-box;
+
+  }
+
+  .our-team-profile{
+    width: 100%;
+    height: 417px;
+  }
+
+  /* .our-team-profile-pic{
+    width: 274px;
+height: 342.39px;
+  } */
+
+  /* .our-team-profile-pic img{
+    width: 100%;
+    height: 100%;
+  } */
+
+  .role{
+    width: 100%;
+    height: 78px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 143.1%;        
+  }
+
+  .name{
+    width: 100%;
+    height: 26px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 143.1%;
+    color: #000000;
+  }
+
+  #frontend{
+    margin-left: 123.01px;
+  }
+
+  #iot{
+    margin-right: 140px;
+  }
+
+
+
+  #iot{
+    margin-right: 140px;  /* doesn't work*/
+  }
+
+  .nine{
+    min-height: 300px;
+  }
+
+  .colored-curve{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .colored-curve img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+
+}
+  .work-with-us{
+    width: 100%;
+    height: 230.48px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    text-align: center;
+    margin: auto; 
+    margin-top: 49.28px;
+  }
+
+  .work-with-us-head{
+    width: 100%;
+    height: 54px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 143.1%;
+    text-align: center;
+    color: #000000;
+  }
+
+  .work-with-us-text{
+    width: 100%;
+    height: 52px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 143.1%;
+    text-align: center;
+    color: #7F7E7E;
+  }
+
+  .work-with-us-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .work-with-us-btn button{
+    margin-top: 57.77px;
+    height: 45.83px;
+    width: 147.02px;
+    background: linear-gradient(101.53deg, #127CFF -9.34%, #2FC1FE 106.23%);
+    border-radius: 90px;
+  }
+
+  footer{
+    /* width: 100%; */
+    height: 264.87px;
+    margin-top: 183.48px;
+    margin-left: 114.81px;
+    margin-right: 142.94px;
+    display: flex;
+  }
+
+  .footer-brand-name{
+    height: 24px;
+    width: 100%;
+    color: black;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150.1%;
+    margin-top: 9px;
+    margin-left: 12.56px;
+  }
+
+  .footer-brand{
+    display: flex;
+  }
+
+  .footer-products{
+    width: 100px;
+    height: 124.14px;
+    margin-top: 9px;
+    margin-left: 388px;
+  }
+
+  .footer-company{
+    width: 140px;
+    height: 156.38px;
+    margin-top: 9px;
+    margin-left: 123px;
+  }
+
+  .footer-how-it-works{
+    width: 147.05px;
+    height: 57.38px;
+    margin-top: 9px;
+    margin-left: 58px;
+  }
+
+  .footer-lower{
+    margin: -3px 142.94px 111.97px 114.81px;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;    
+  }
+
+  .footer-lower-left{
+    height: 24px;
+    width: 451px;
+    bottom: 0%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150.1%;
+    color: #797979;
+  }
+
+  .footer-lower-right{
+    display: flex;
+    height: 17.41px;
+    width: 143.88px;
+  }
+
+  .footer-icon{
+    padding-left: 10px;
+    /* height: 17.41px;
+    width: 17.41px; */
+  }
+
+  .footer-icon img{
+    width: 100%;
+    height: 100%;
+  }
+
+
+  h6{
+    font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 150.1%;
+color: #000000;
+  }
+
+ p{
+    font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 150.1%;
+color: #797979;
+  }
