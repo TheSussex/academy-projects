@@ -321,32 +321,39 @@ button {
 
   .our-team-complete{
     margin-top: 114.59px;
-    /* padding-right: 123.01px; */
+    padding: 0 140px 0 123px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 26.99px;
-    box-sizing: border-box;
-
+    column-gap: 27px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
 
   .our-team-profile{
-    width: 100%;
+    width: 274px;
     height: 417px;
   }
 
-  /* .our-team-profile-pic{
-    width: 274px;
-height: 342.39px;
-  } */
-
-  /* .our-team-profile-pic img{
+  .our-team-profile-pic{
     width: 100%;
+    height: 342.39px;
+  }
+
+  .our-team-profile-pic img{
+    /* width: 100%; */
     height: 100%;
-  } */
+  }
+
+  .our-team-profile-full {
+    padding-top : 15px;
+    width: 100%;
+    text-align: left;
+  }
 
   .role{
-    width: 100%;
-    height: 78px;
+    /* width: 100%; */
+    /* height: 78px; */
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -354,8 +361,6 @@ height: 342.39px;
   }
 
   .name{
-    width: 100%;
-    height: 26px;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -363,19 +368,6 @@ height: 342.39px;
     color: #000000;
   }
 
-  #frontend{
-    margin-left: 123.01px;
-  }
-
-  #iot{
-    margin-right: 140px;
-  }
-
-
-
-  #iot{
-    margin-right: 140px;  /* doesn't work*/
-  }
 
   .nine{
     min-height: 300px;
@@ -384,17 +376,15 @@ height: 342.39px;
   .colored-curve{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
   }
 
   .colored-curve img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
   }
 
-}
   .work-with-us{
     width: 100%;
     height: 230.48px;
