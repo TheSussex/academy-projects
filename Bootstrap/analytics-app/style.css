@@ -1,0 +1,148 @@
+/* :root {
+  --text-secondary: #8794ba;
+  --theme-pink: #ef2a82;
+}
+
+body {
+  color: var(--text-secondary);
+}
+
+.hero {
+  width: 100%;
+  height: 815px;
+  background-image: url(/assets/background-top.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  */
+
+/* #nav-menu {
+  margin-top: 30px;
+}
+
+#nav-menu a {
+  color: var(--text-secondary);
+}
+
+.menu-btn:first-of-type {
+  border: none;
+  margin-right: 10px;
+}
+
+.menu-btn {
+  width: 161px;
+  border: 1px solid #465b95;
+  border-radius: 68px;
+  background-color: transparent;
+  color: var(--text-secondary);
+}
+
+.menu-btn:hover {
+  color: var(--theme-pink);
+} */
+
+:root {
+  --text-secondary: #8794ba;
+  --theme-pink: #ef2a82;
+}
+
+body {
+  color: var(--text-secondary);
+}
+
+.hero {
+  width: 100%;
+  height: 815px;
+  background-color: #172755;
+  border-bottom: 18px solid #ef2a82;
+  position: relative;
+  overflow: hidden; /*so the background images (subtract) doesn't spill out of the container in the mobile view */
+  transform: skew(0, -7deg);
+}
+
+.hero > * {
+  transform: skew(0, 7deg);
+} /* '>' is a direct child selector, means to select just the children of the parent(hero) */
+
+.hero .top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 400px;
+}
+
+.hero .bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 1000px;
+}
+
+#nav-menu {
+  margin-top: 30px;
+}
+
+#nav-menu a {
+  color: var(--text-secondary);
+}
+
+.menu-btn:first-of-type {
+  border: none;
+  margin-right: 10px;
+}
+
+.menu-btn {
+  width: 161px;
+  border: 1px solid #465b95;
+  border-radius: 68px;
+  background-color: transparent;
+  color: var(--text-secondary);
+}
+
+.menu-btn:hover {
+  color: var(--theme-pink);
+}
+*/ .hero img {
+  position: absolute;
+  right: 0;
+} /*remember img comes after the navbar*/
+
+.feature-row {
+  padding-top: 81px;
+}
+
+.main {
+  padding-top: 38px;
+}
+
+h2 {
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+}
+
+.screen-one {
+  padding-top: 3.11%;
+}
+
+p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  padding-top: 5%;
+}
+
+.bottom {
+  width: 100%;
+  height: 1225px;
+  background-image: url(/assets/background-bottom.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* .pricing{
+    position: absolute;
+    top: 263%;
+    left: 17.14%;
+  } */
