@@ -1,68 +1,58 @@
-/* :root {
-  --text-secondary: #8794ba;
-  --theme-pink: #ef2a82;
-}
-
-body {
-  color: var(--text-secondary);
-}
-
-.hero {
-  width: 100%;
-  height: 815px;
-  background-image: url(/assets/background-top.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: bottom;
-  */
-
-/* #nav-menu {
-  margin-top: 30px;
-}
-
-#nav-menu a {
-  color: var(--text-secondary);
-}
-
-.menu-btn:first-of-type {
-  border: none;
-  margin-right: 10px;
-}
-
-.menu-btn {
-  width: 161px;
-  border: 1px solid #465b95;
-  border-radius: 68px;
-  background-color: transparent;
-  color: var(--text-secondary);
-}
-
-.menu-btn:hover {
-  color: var(--theme-pink);
-} */
-
 :root {
+  --text-main: #172755;
   --text-secondary: #8794ba;
   --theme-pink: #ef2a82;
 }
 
 body {
+  background-color: #f8f9ff;
   color: var(--text-secondary);
+}
+
+.section-heading {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 47px;
+  color: var(--text-main);
+  margin-bottom: 30px;
+}
+
+.section-subheading {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--text-main);
+  margin-bottom: 15px;
 }
 
 .hero {
   width: 100%;
-  height: 815px;
+  height: 800px;
   background-color: #172755;
   border-bottom: 18px solid #ef2a82;
   position: relative;
-  overflow: hidden; /*so the background images (subtract) doesn't spill out of the container in the mobile view */
-  transform: skew(0, -7deg);
+  /* overflow: hidden;  */
+  /*so the background images (subtract) doesn't spill out of the container in the mobile view */
+  transform: skew(0, -4.76deg) translateX(calc(50vw / -12));
 }
 
 .hero > * {
-  transform: skew(0, 7deg);
+  transform: skew(0, 4.76deg);
 } /* '>' is a direct child selector, means to select just the children of the parent(hero) */
+
+.hero-wrapper {
+  position: relative;
+  height: 800px;
+  width: 100%;
+  padding-top: 50px;
+  /* overflow: hidden; */
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    overflow: hidden;
+  }
+} /*ensures the div is not spilling out, that is to the sides*/
 
 .hero .top-left {
   position: absolute;
@@ -102,47 +92,185 @@ body {
 .menu-btn:hover {
   color: var(--theme-pink);
 }
-*/ .hero img {
+
+.hero-img {
   position: absolute;
   right: 0;
-} /*remember img comes after the navbar*/
+  width: 50%;
+  height: 600px;
+  bottom: -70px;
+  object-fit: cover;
+  object-position: left;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+/*object-fit: this maintains the object aspect ratio, this clips out some parts of the img bcos the obj was stretching bcos of the fixed width and height given to the img.
+object-position: specifies what aspect of the img to cut out, left means start cutting from the right*/
+/* filter: drop-shadow()); what does it do? */ /*remember img comes after the navbar*/
+/*  bottom: -30px means 30px into the bottom edge, positive value takes it away from the bottom edge */
 
-.feature-row {
-  padding-top: 81px;
+.features-icon {
+  margin-bottom: 26px;
 }
 
-.main {
-  padding-top: 38px;
+.features-text {
+  width: 75%;
 }
 
-h2 {
-  font-weight: bold;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 150%;
+@media (max-width: 576px) {
+  .features-text {
+    width: 100%;
+    text-align: center;
+  }
 }
 
-.screen-one {
-  padding-top: 3.11%;
+.pricing {
+  width: 100%;
+  min-height: 1225px;
+  background-color: #172755;
+  border-top: 10px solid #ef2a82;
+  position: relative;
+  /* transform: skew(0, -4.76deg); */
+  /* overflow: hidden; */
+  /* clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 30%); */
+}
+
+/* .pricing > * {
+  transform: skew(0, 4.76deg);
+} */
+
+.pricing-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 200px;
+}
+
+.pricing .bottom-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 1500px;
+}
+
+/* .box-one {
+  height: 440px;
+  background: #0f1f4b;
+  opacity: 0.7;
+  box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
+  border-radius: 30px;
+  width: 280px;
+  max-width: 100%;
+  margin: 20px auto;
+} */
+
+.box-starter,
+.box-premium {
+  background-color: #0f1f4b;
+  height: 440px;
+  opacity: 0.7;
+  box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
+  border-radius: 30px;
+  width: 340px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.box-standard {
+  background-color: #ffffff;
+  height: 440px;
+  box-shadow: 0px 18px 50px -15px #060f28;
+  border-radius: 30px;
+  width: 340px;
+  max-width: 100%;
+  margin: 20px auto;
 }
 
 p {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 150%;
-  padding-top: 5%;
+  color: var(--text-secondary);
 }
 
-.bottom {
+.line {
+  margin-top: 10px;
+  border-bottom: 1px solid;
+  color: #2a407c;
+  display: block;
+  width: 60%;
+  margin-bottom: 20px;
+  margin: auto;
+}
+
+/* .line-two {
+  margin-top: 10px;
+  border-bottom: 1px solid;
+  color: #2a407c;
+  display: block;
   width: 100%;
-  height: 1225px;
-  background-image: url(/assets/background-bottom.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  margin: auto;
+} */
+
+.box-starter h3,
+.box-premium h3 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  color: #ffffff;
 }
 
-/* .pricing{
-    position: absolute;
-    top: 263%;
-    left: 17.14%;
-  } */
+.box-standard h3 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  color: #172755;
+}
+
+.box-text {
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 70px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.box-standard h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 70px;
+  text-align: center;
+  color: #172755;
+}
+
+.box-starter button,
+.box-premium button {
+  width: 161px;
+  border: 1px solid #2a407c;
+  box-sizing: border-box;
+  border-radius: 68px;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.box-standard button {
+  width: 161px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 68px;
+  background-color: #ef2a82;
+  color: #ffffff;
+}
+
+.divider {
+  margin-top: 100px;
+  border-bottom: 1px solid;
+  color: #2a407c;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  margin: auto;
+}
+
+.footer-icons {
+  padding-left: 3px;
+}
