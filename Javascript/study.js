@@ -303,3 +303,49 @@
 //   .reduce((acc, score) => acc + score, 0);
 
 //     console.log(totalJediScore);
+
+
+// let x = 123.34;
+// console.log(parseInt(x));
+// console.log(parseFloat(x));
+// console.log(Number.NaN);
+
+// let names = ['ayo', 'bolu', 'caro'];
+// names.forEach(element => {
+//     x = `${element} is one of my friends` 
+//     console.log(x);
+// });
+
+// let nums = [0, 1, 3, 4, 5, -1, -8, 9, 0];
+
+// let multiply = nums.map(nums => nums**3);
+// console.log(multiply);
+
+// let negatives = nums.filter(nums => nums<0);
+// console.log(negatives);
+
+// let sum = nums.reduce((acc, cur) => acc + cur);
+// let sum1 = nums.reduce((acc, cur) => acc + cur, 10);
+
+// console.log(sum);
+// console.log(sum1);
+// console.log(nums.indexOf(-8));
+// console.log(nums.lastIndexOf(0));
+
+// //REGEX
+
+// let name = 'Success Ologunsua536 is my is is HEROs';
+// let digits = 123456789
+// let find = name.search(/s/g);
+// let repla = name.replace(/hero/i, 'mom');
+// let globalSearch = name.match(/is*/g);
+
+// // console.log(name.match(/[5-8]/g);
+
+// console.log(globalSearch);
+// console.log(find);
+// console.log(repla);
+// let is = /is/;
+// console.log(is.test('my uncle was a kind man'));
+// console.log(is.exec('my uncle is a kind man'));
+
