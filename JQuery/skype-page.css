@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  font-family: "Open Sans", sans-serif;
+  background-color: red;
+  color: white;
+}
+
+.chat-div {
+  height: 900px;
+  width: 25%;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  /* overflow: hidden; */
+}
+
+.chat-div-header {
+  width: 100%;
+  height: 7%;
+  background-color: #2a2a31;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.chat-main {
+  width: 100%;
+  height: 93%;
+}
+
+.chat-screenshot {
+  width: 70%;
+  height: 30%;
+  /* background-color: #2a2a31; */
+  background-color: white;
+  position: relative;
+}
+
+.main {
+  width: 75%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  background-color: #3e454e;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-left-top {
+  display: flex;
+  padding-top: 10px;
+}
+
+.header-left-bottom {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+
+.circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: red;
+  border: solid white 2px;
+  margin-left: 20px;
+  margin-right: 15px;
+}
+
+.header-left-bottom-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.header-left-bottom-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-left-bottom-text {
+  margin-left: 5px;
+}
+
+.header-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  /* margin-left: 20px; */
+}
+
+.grid h5 {
+  width: 100%;
+  height: 100%;
+}
+.grid {
+  /* width: 100%;
+  height: 100%; */
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.grid-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.grid-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.profiles {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: block;
+  margin: 5px;
+  background-image: url(/assets/blue-picture.jpg);
+  background-size: cover;
+}
+
+.profiles-empty {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: block;
+  margin: 5px;
+  background-image: url(/assets/person.svg);
+  background-size: cover;
+}
+
+.profiles-empty img {
+  width: 100%;
+  height: 100%;
+}
+
+.middle {
+  width: 100%;
+  height: 670px;
+  background-color: #2a2a31;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-picture {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  background-image: url(/assets/blue-picture.jpg);
+  background-size: cover;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #141518;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-controls {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 450px;
+}
+
+.control-microphone,
+.control-share-video,
+.control-end-call {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.microphone,
+.share-video,
+.end-call {
+  width: 20px;
+  height: 20px;
+}
+
+.control-microphone {
+  background-color: white;
+}
+
+.control-share-video {
+  background-color: black;
+}
+
+.control-end-call {
+  background-color: crimson;
+}
+
+.microphone img,
+.share-video img,
+.end-call img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-other-functions {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 200px;
+}
+
+.other-functions {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* padding-left: 10px; */
+  padding-right: 60px;
+  margin-right: 40px;
+}
+
+/* .other-functions p {
+  width: 40px;
+  height: 100%;
+} */
+
+/* .chat-span,
+.share-screen-span {
+  background-color: white;
+} */
+
+.chat,
+.share-screen,
+.raise-hand,
+.react,
+.more {
+  width: 20px;
+  height: 20px;
+}
+
+.chat img,
+.share-screen img,
+.raise-hand img,
+.react img,
+.more img {
+  width: 100%;
+  height: 100%;
+}
