@@ -1,0 +1,10 @@
+.resize {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+}
+
+input {
+  font-size: 20px;
+  color: crimson;
+}

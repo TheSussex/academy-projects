@@ -1,3 +1,5 @@
+// TUESDAY ASSIGNMENT
+
 $(document).ready(function(){
 
     // $("h1").hover(function(){
@@ -181,30 +183,50 @@ $(document).ready(function(){
     //     $("div").clone("div p:first").html("p:last")
     // })
 
+})
 
-    // THURSDAY ASSIGNMENT
+// THURSDAY ASSIGNMENT
+$(document).ready(function(){
 
-//     $("#submit-btn").click(function(){
-//         let inputs= $('<tr></tr>');
-//         let cell1 = $('<td></td>').append($("#name").val());
-//         let cell2 = $('<td></td>').append($("#category").val());
-//         let cell3 = $('<td></td>').append($("#type").val());
-//         let cell4 = $('<td></td>').append($("#rating").val());
-//         // let cell5 = $('<td></td>').append($("#delete-row"));
-//         let delbtn = <button type="button" class="btn-delete">Delete</button>
-//         let cell5 =  $('<td></td>').append(del-btn);
-//         inputs.append(cell1).append(cell2).append(cell3).append(cell4).append(cell5);
-//         $("tbody").append(inputs)
+    $("#submit-btn").click(function(){
+        let cell1 = $("#name").val();
+        let cell2 = $("#category").val();
+        let cell3 = $("#type").val();
+        let cell4 = $("#rating").val();
+        let inputs = "<tr></td>" + cell1 + "</td><td>" + cell2 + "</td><td>" + cell3 + "</td><td>" + cell4 + "</td><td><input id='delete' type='button' name='delete' value='Delete'></td></tr>"
+        $("tbody").append(inputs)
+       
+        $(".table-div").show()
+        $("form").trigger("reset");       
 
-//         $(".btn-delete").click(function(){
-//             $(this).parents("tr").remove()
-//         })
-//     })
-//         $("#myInput").on("keyup", function(){
-//             let value = $(this).val().toLowerCase()
-//             $("#myTable tr").filter(function(){
-//                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-//             })
-//         })
+    })
+
+    $("#delete").click(function(){
+        $(this).parents('tr').remove();
+    })
+        
+    $("#myInput").on("keyup", function(){
+        let value = $(this).val().toLowerCase()
+        $("#tbody tr").filter(function(){
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        })
+    })
+
+    $("#sort-btn").click(function(){
+        let compare_rows = function (a,b){
+          let a_val = $(a).text().toLowerCase();
+          let b_val = $(b).text().toLowerCase();
+          if (a_val>b_val){
+            return 1;
+          }
+          if (a_val<b_val){
+            return -1;
+          }
+          return 0;
+        };
+
+        $("tr").sort(compare_rows).appendTo("tbody");
+    
+})
 })
 

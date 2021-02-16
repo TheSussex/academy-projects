@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Platform</title>
+    <link rel="stylesheet" href="./quiz.css">
+</head>
+<body>
+  <div id='landing-page'>
+    <h2>Welcome! <br><br> Click the button below to take the quiz</h2>
+    <button id="landing-page-btn">TAKE QUIZ</button>      
+  </div>
+  
+  <div id="questions-div" hidden>
+
+    <!-- <h2>Let's test your knowledge of Manchester United!</h2> -->
+    <form id="form">
+
+      <h3>1. Who is the current captain of Manchester United?</h3>
+      <input type="radio" name="captain" id="marcus" value="marcus">
+      <label for="marcus">Marcus Rashford</label><br>
+      <input type="radio" name="captain" id="harry" value="harry" class="answer">
+      <label for="harry">Harry Maguire</label>
+
+      <br>
+
+      <h3>2. Manchester United is nicknamed?</h3>
+      <input type="radio" name="nickname" id="red-devils" value="red-devils" class="answer">
+      <label for="red-devils">Red devils</label><br>
+      <input type="radio" name="nickname" id="gunner" value="gunner">
+      <label for="gunner">Gunners</label>
+
+      <br>
+
+      <h3>3. Which club did Man United beat 9-0?</h3>
+      <input type="radio" name="beat" id="liverpool" value="liverpool">
+      <label for="liverpool">Liverpool</label><br>
+      <input type="radio" name="beat" id="southampton" value="southampton" class="answer">
+      <label for="southampton">Southampton</label>
+
+      <br>
+
+      <h3>4. Ole Solksjaer is the ----- of Man United.</h3>
+      <input type="radio" name="coach" id="owner" value="owner">
+      <label for="owner">Owner</label><br>
+      <input type="radio" name="coach" id="coach" value="coach" class="answer">
+      <label for="coach">Coach</label>
+
+      <br>
+
+      <h3>5. Which of these is a player in the club?</h3>
+      <input type="radio" name="play" id="messi" value="messi">
+      <label for="messi">Lionel Messi</label><br>
+      <input type="radio" name="play" id="bruno" value="bruno" class="answer">
+      <label for="bruno">Bruno Fernandes</label>
+
+      <br>
+
+      <h3>6. Which of these is a goalkeeper for Man United?</h3>
+      <input type="radio" name="gk" id="tc" value="tc">
+      <label for="tc">Thibaut Courtois</label><br>
+      <input type="radio" name="gk" id="ddg" value="ddg" class="answer">
+      <label for="ddg">David De Gea</label>
+
+      <br>
+
+      <h3>7. Which of these is a player in the club?</h3>
+      <input type="radio" name="player" id="harry" value="harry">
+      <label for="harry">Harry Kane</label><br>
+      <input type="radio" name="player" id="pogba" value="pogba" class="answer">
+      <label for="pogba">Paul Pogba</label>
+
+      <br>
+
+      <h3>8. Who wear the No. 10 jersey in the club?</h3>
+      <input type="radio" name="no10" id="mata" value="mata">
+      <label for="mata">Juan Mata</label><br>
+      <input type="radio" name="no10" id="rashford" value="rashford" class="answer">
+      <label for="rashford">Marcus Rashford</label>
+
+      <br>
+
+      <h3>9. Who is the most successful manager in the history of the club"?</h3>
+      <input type="radio" name="manager" id="jose" value="jose">
+      <label for="jose">Jose Mourinho</label><br>
+      <input type="radio" name="manager" id="alex" value="alex" class="answer">
+      <label for="alex">Alex Ferguson</label>
+
+      <br>
+
+      <h3>10. Manchester United is one of the oldest clubs in ----?</h3>
+      <input type="radio" name="oldest" id="spain" value="spain">
+      <label for="spain">Spain</label><br>
+      <input type="radio" name="oldest" id="england" value="england" class="answer">
+      <label for="england">England</label>
+
+      <br><br>
+
+      <button id="submit">See Result</button>    
+    </form>
+  </div>
+
+  <div id="results" hidden>
+    <p></p> 
+  </div> 
+
+  <div id="low-score" hidden>
+    <img src="/assignments/quiz-platform-ass/oops.jpg">
+  </div> 
+
+  <div id="high-score" hidden>
+    <img src="/assignments/quiz-platform-ass/old-trafford.jpg">
+  </div>  
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./quiz.js"></script>
+</body>
+</html>

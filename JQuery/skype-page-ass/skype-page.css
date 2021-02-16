@@ -4,60 +4,33 @@
   box-sizing: border-box;
 }
 
+html,
 body {
-  width: 100%;
-  height: 100%;
-  position: fixed;
+  /* position: relative; */
   font-family: "Open Sans", sans-serif;
   background-color: red;
   color: white;
-}
-
-.chat-div {
-  height: 900px;
-  width: 25%;
-  background-color: black;
-  position: absolute;
-  right: 0;
-  /* overflow: hidden; */
-}
-
-.chat-div-header {
-  width: 100%;
-  height: 7%;
-  background-color: #2a2a31;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5px;
-}
-
-.chat-main {
-  width: 100%;
-  height: 93%;
-}
-
-.chat-screenshots {
   width: 100%;
   height: 100%;
-  background-color: black;
-  /* margin-bottom: 20px; */
 }
 
-.rectangle {
-  width: 150px;
-  height: 200px;
-  background-color: white;
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 100%;
 }
 
 .main {
   width: 75%;
   height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 header {
   width: 100%;
-  height: 150px;
+  height: 20%;
   background-color: #3e454e;
   display: flex;
   justify-content: space-between;
@@ -169,112 +142,113 @@ header {
 
 .middle {
   width: 100%;
-  height: 670px;
+  /* height: 670px; */
+  min-height: 70%;
   background-color: #2a2a31;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .center-picture {
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  display: block;
-  margin: auto;
+
   background-image: url(/assets/blue-picture.jpg);
   background-size: cover;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.skype-logo {
+  height: 100px;
+  width: 100px;
+  background-image: url(/assets/skype.svg);
+  background-size: cover;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  align-self: end;
+  justify-self: start;
+  margin-left: 10px;
 }
 
 footer {
   width: 100%;
-  height: 80px;
+  height: 10%;
   background-color: #141518;
-  display: flex;
-  align-items: center;
+
+  display: grid;
+  grid-template-columns: 35% 30% 35%;
   justify-content: center;
+  align-content: center;
 }
 
 .footer-controls {
   width: 100%;
   height: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
   display: flex;
+  flex-flow: row nowrap;
   align-items: center;
-  justify-content: center;
-  margin-left: 450px;
+  justify-content: space-evenly;
+  margin-right: 50px;
 }
 
 .control-microphone,
 .control-share-video,
 .control-end-call {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background-color: crimson;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
+  /* background-color: crimson; */
 }
 
-.microphone,
-.share-video,
-.end-call {
-  width: 20px;
-  height: 20px;
+.footer-controls img {
+  width: 100%;
+  height: 100%;
 }
 
 .control-microphone {
   background-color: white;
 }
 
-.control-share-video {
+/* .control-share-video {
   background-color: black;
-}
+} */
 
 .control-end-call {
   background-color: crimson;
 }
 
-.microphone img,
-.share-video img,
-.end-call img {
-  width: 100%;
-  height: 100%;
-}
-
 .footer-other-functions {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
 }
 
 .other-functions {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  /* background-color: red; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  /* padding-left: 10px; */
+  align-self: center;
   padding-right: 60px;
-  /* margin-right: 40px; */
 }
 
-.other-functions p {
-  width: 40px;
+.other-functions .p {
+  width: 100%;
   height: 100%;
-}
-
-.chat-span,
-.share-screen-span {
-  /* background-color: white; */
+  text-align: center;
 }
 
 .chat,
@@ -293,4 +267,121 @@ footer {
 .more img {
   width: 100%;
   height: 100%;
+}
+
+.chat-div {
+  height: 100%;
+  width: 25%;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+}
+
+.chat-div-header {
+  background-color: #2a2a31;
+  display: grid;
+  /* grid-template-rows: 0.5fr 1fr 0.5fr; */
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.header-items {
+  justify-self: center;
+  width: 40px;
+  height: 40px;
+}
+
+.cancel {
+  width: 25px;
+  height: 25px;
+}
+
+.header-items img {
+  width: 100%;
+  height: 100%;
+}
+
+.chat-main {
+  background-color: black;
+}
+
+.chat-main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.chat-screenshots {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chat-screenshots .profiles {
+  height: 40px;
+  width: 40px;
+}
+
+.chat-screenshots .rectangle {
+  height: 150px;
+  width: 250px;
+  background-color: white;
+  border-radius: 30px;
+  color: black;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.chat-footer {
+  background-color: #2a2a31;
+  display: grid;
+  grid-template-columns: 70% 15% 15%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.input-div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2a2a31;
+}
+
+.input {
+  width: 80px;
+  height: 60px;
+  display: flex;
+  margin: auto;
+  /* border-radius: 30%; */
+  margin-right: 120px;
+}
+
+.smiley {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.share,
+.more {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.smiley img,
+.share img,
+.more img {
+  width: 100%;
+  height: 100%;
+}
+
+.color-text-change {
+  color: red;
+  font-size: 20px;
 }

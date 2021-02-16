@@ -296,7 +296,33 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-    // $("#btn6").click(function(){
+    // $("#ajax").load("https://v2.jokeapi.dev/joke/Programming?format=txt")
+
+    // $.get(url, function()) first syntax
+    // $get(url:link, function: function()) second syntax inside object
+
+    // $.get("http://newsapi.org/v2/top-headlines -G \
+    // -d country=us \
+    // -d apiKey=27c4a49f467042b29eaa7ed40406ad14", function(data){
+    //   let values = JSON.stringify(data);
+    //   $("#ajax_one").text(values);
+    // })
+
+
+    // $("button").click(function(){
+        // $.get({
+        //     url: "http://newsapi.org/v2/top-headlines -G \
+        //     -d sources=bbc-news \
+        //     -d apiKey=27c4a49f467042b29eaa7ed40406ad14",
+        //     success: function(data){
+        //         let values = JSON.stringify(data);
+        //         $("#ajax_one").text(values);
+        //       }
+        // })
+    // })
+    
+
+    // $("button").click(function(){
     //     $.get({
     //         url: "https://restcountries.eu/rest/v2/all",
     //         success: function(data){
@@ -306,7 +332,7 @@ $(document).ready(function(){
     //     })
     // })
 
-    // $("#btn5").click(function(){
+    // $("button").click(function(){
     //     $.post({
     //         url: "https://localhost:3050/v1/bookstore-api/auth/user/signup",
     //         data: {
