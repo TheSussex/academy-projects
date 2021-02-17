@@ -6,12 +6,12 @@ $(document).ready(function(){
   $("#landing-page-btn").click(function(e){
     e.preventDefault()
     $("#landing-page").hide()
-    $("#questions-div").show()
+    $("form").show()
   })
 
-  $("input").click(function(e){
-    e.preventDefault()
-    if ($(this.className) === "answer") {
+  $("input").click(function(){
+    let correct = this.className
+    if (correct === "answer") {
       score++;
     }
     return score;
@@ -34,7 +34,7 @@ $(document).ready(function(){
             padding: "10px",
       }, "slow")          
     } else {
-      $("#results p").html("Wow! You scored" + scorePercent + ". See you at Old Trafford!")
+      $("#results p").html("Wow! You scored " + scorePercent + "%. See you at Old Trafford!")
       $("#high-score").show().animate({
         float: "left",
             overflow: "hidden",
@@ -47,9 +47,3 @@ $(document).ready(function(){
   })    
 
 }) 
-
-
-
-
-
-
