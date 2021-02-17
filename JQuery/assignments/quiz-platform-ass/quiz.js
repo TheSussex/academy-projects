@@ -24,7 +24,7 @@ $(document).ready(function(){
 
     scorePercent = (score / 10 ) * 100;
 
-    if (scorePercent <= 30) {
+    if (scorePercent <= 50) {
       $("#results p").html("You scored " + scorePercent + "%. Are you truly a fan?")  
       $("#low-score").show().animate({
         float: "left",
@@ -41,9 +41,7 @@ $(document).ready(function(){
             background: "magenta",
             width: "50%",
             padding: "10px",
-      }, "slow")
-      
+      }, "slow")      
     }     
-  })    
-
+  })  
 }) 
