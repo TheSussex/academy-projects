@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Intro</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="app-7">
+        <ol>
+          <todo-item
+            v-for="item in groceryList"
+            v-bind:todo="item"
+            v-bind:key="item.id"
+          ></todo-item>
+        </ol>
+      </div>
+      <!-- <p :title="message">{{message}}</p> -->
+      <!-- <h1>My name is {{ name }}</h1> -->
+      <!-- <h1 v-if="name">Welcome, {{ name }}</h1>
+        <h1 v-else>Welcome Guest</h1>
+        <li v:for="language in languages" v-bind:key="langauge">{{ langauage }}</li> -->
+      <!-- <ul>
+            <input v-on:input="updateName type="text" value="name">
+        </ul> -->
+      <!-- <h1 v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">{{message | capitalize}}</h1>
+        <p>My name is {{name}}, and I speak {{ lang }}</p> -->
+      <!-- <select v-model="lang" name="" id="">
+            <option v-for="language in languages" :value="language" :key="language">
+                {{ language }}
+            </option>
+        </select> -->
+      <!-- <select v-on:change="handleSelect" name="" id="">
+            <option value="a">french</option>
+            <option value="b">english</option>
+            <option value="c">yoruba</option>
+        </select> -->
+      <!-- <p >My fullname is {{fullName}}</p>
+        <input v-model="firstName" type="text">
+        <input v-model="lastName" type="text">
+        <button @click="onClick" :disabled="isDisabled">Submit</button> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      Vue.component("todo-item", {
+        props: ["todo"],
+        template: "<li>{{ todo.text }}</li>",
+      });
+
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            message: "Hello World",
+            name: "Bidemi",
+            firstName: "Success",
+            lastName: "Ologunsua",
+            // showName: false
+            languages: ["French", "English", "Chinese", "Spanish"],
+            lang: "English",
+            isDisabled: false,
+            activeColor: "black",
+            fontSize: 16,
+            groceryList: [
+              { id: 0, text: "Vegetables" },
+              { id: 1, text: "Cheese" },
+              { id: 2, text: "Whatever else humans are supposed to eat" },
+            ],
+          };
+        },
+        props: {},
+        mixins: {},
+        created: {},
+        mounted() {
+          setTimeout(() => {
+            this.activeColor = "magenta";
+          }, 2000);
+        },
+        watch: {
+          lang() {
+            console.log("new langugage");
+          },
+        },
+        computed: {
+          fullName() {
+            return this.firstName + " " + this.lastName;
+          },
+        },
+        methods: {
+          //     handleSelect() {
+          //         console.log("selected")
+          //     },
+          //     onClick() {
+          //     alert("hey");
+          // }
+        },
+
+        components: {},
+        filters: {
+          capitalize(data) {
+            return data.toUpperCase();
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
