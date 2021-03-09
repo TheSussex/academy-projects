@@ -1,0 +1,14 @@
+build a news app that does the following
+1. On the landing page, the user should see top headlines of news 
+*Info should contain
+-News Headline
+-Snippet of the news
+-Source
+2. User should be able to view top headlines of categories like: business, entertainment, general, health, science, sports, technology
+3. Users should be able to search news any other category they want,
+4. User should be able to view news by several news source
+5. Users should be able to add particular news to a read later list that should be persisted on their browser localstorage
+6. Each page result should only show 5 news items at a time
+
+
+
