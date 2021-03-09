@@ -2,13 +2,15 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+app.use(express.json());
+
 const userDetails = [
-  {
-  firstName: "Success",
-  lastName: "Ologunsua",
-  email: "successologunsua@gmail.com",
-  password: "success"
-}
+//   {
+//   firstName: "Success",
+//   lastName: "Ologunsua",
+//   password: "success",
+//   email: "successologunsua@gmail.com"  
+// }
 ]
 
 app.get("/userdetails", (req, res) => {
@@ -16,16 +18,17 @@ app.get("/userdetails", (req, res) => {
 })
 
 app.post("/signup",  (req, res) => {
-  const {password, email} = req.body;
+  const { firstName, lastName, password, email } = req.body;
   console.log(req.body);
-  if (!password || !email) {
+  if (firstName==='' || lastName==='' || password==='' || email==='') {
       return res
       .status(400)
       .json({ status: "fail", message: "Incomplete details"})
   }
-  if (userDetails.find(el => el.password === password || el.email === email)) {
+  if (password===req.body.password || email===req.body.email) {
+    // if (userDetails.find((el) => el.email === email || el.password == password)) {
       return res
-      .status(409)
+      .status(401)
       .json({ status: "fail", message: "User with this password or email exists"})
   }
   userDetails.push(req.body)
@@ -40,7 +43,7 @@ app.get("/signin", function (req, res) {
   if (userDetails.find((el) => el.email === email && el.password === password)) {
     return res
     .status(200)
-    .json({ status: "success", message: "You have logged in", data: user});
+    .json({ status: "success", message: "Login successful", data: user});
   }
     res
     .status(404)
@@ -48,10 +51,13 @@ app.get("/signin", function (req, res) {
 });
 
 
-app.patch("/userDetails/:userId", function (req, res) {
-  const { userId } = req.params;
-  const user = userDetails.find((el) => el.email === userId);
+app.patch("/userDetails/:id", function (req, res) {
+  const { id } = req.params;
+  const user = userDetails.find((el) => el.email === id);
   if (user) {
+    if (user.email !== req.body.email){
+      res.status(400).json({ status: "fail", message: "email not updated"})
+    }
       user.firstName = req.body.firstName
       user.lastName = req.body.lastName
       user.password = req.body.password      
@@ -61,7 +67,7 @@ app.patch("/userDetails/:userId", function (req, res) {
           data: user
       });
   }
-  res.status(409).json({ status: "fail", message: "Email not updated "})
+  res.status(400).json({ status: "fail", message: "Email not updated "})
 })
 
 app.listen(port, () => {
