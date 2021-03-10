@@ -19,7 +19,7 @@ const userDetails = [
 },
 ]
 
-// get all users' details
+// get all userDetails' details
 app.get("/userdetails", (req, res) => {
     res.status(200).json(userDetails);
 })
@@ -27,7 +27,7 @@ app.get("/userdetails", (req, res) => {
 // get single user's details
 app.get("/userdetails/:userEmail", (req, res) => {
   const { userEmail } = req.params;
-  const currentUser = users.find(el => el.email === userEmail);
+  const currentUser = userDetails.find(el => el.email === userEmail);
   return res.status(200).json({ 
     status: "success", 
     message: "User fetched successfully", 
@@ -59,33 +59,42 @@ app.post("/signup",  (req, res) => {
 
 app.post("/signin", function (req, res) {
   const {email, password} = req.body;
-  if (email || password) {
+  if ( !email || !password ) {
     return res
-    .status(200)
-    .json({ status: "success", message: "Login successful", data: user});
+    .status(400)
+    .json({ status: "fail", message: "Incorrect email or password. Try again." });
   }
-    res
-    .status(404)
-    .json({ status: "fail", message: "Account not found, pls sign up" })
+  const user = userDetails.find(el => el.email === email) 
+  if (!user) {
+      return res
+      .status(400)
+      .json({ status: "fail", message: "Incorrect email" });
+  }
+  if (user.password != password){
+      return res
+      .status(409)
+      .json({ status: "fail", message: "Incorrect password" });
+  }
+  res.status(200).json({status: "success", message: "You've successfully logged in"});
 });
 
-app.put("/users/:userEmail", (req, res) => {
-  if (req.body.firstName) {
-      req.currentUser.firstName = req.body.firstName 
-  }
-  if (req.body.lastName) {
-      req.currentUser.lastName = req.body.lastName 
-  }
-  if (req.body.password) {
-      req.currentUser.password = req.body.password 
-  } 
-  return res.status(200).json({ 
-      status: "success", 
-      message: "first name and last name has been updated", 
-      data: req.currentUser  
-  });
+// app.put("/userDetails/:userEmail", (req, res) => {
+//   if (req.body.firstName) {
+//       req.currentUser.firstName = req.body.firstName 
+//   }
+//   if (req.body.lastName) {
+//       req.currentUser.lastName = req.body.lastName 
+//   }
+//   if (req.body.password) {
+//       req.currentUser.password = req.body.password 
+//   } 
+//   return res.status(200).json({ 
+//       status: "success", 
+//       message: "first name and last name has been updated", 
+//       data: req.currentUser  
+//   });
+// })
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
-
